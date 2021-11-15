@@ -28,4 +28,4 @@ class LED8x8():
 
 
 
-LED8x8.display()
+LED8x8.display(Shifter(20, 23, 24))
