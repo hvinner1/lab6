@@ -9,7 +9,7 @@ class LED8x8():
   pattern = [0b00111100, 0b01000010, 0b10100101, 0b10000001, 0b10100101, 0b10011001, 0b01000010, 0b00111100]
 
   def __init__(self, data, latch, clock):
-    self.shifter = Shifter(20, 23, 24)
+    self.shifter = Shifter(data, latch, clock)
     #self.pattern = pattern
     #self.display = display
 
