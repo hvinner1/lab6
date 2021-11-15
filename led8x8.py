@@ -38,6 +38,6 @@ class LED8x8():
 theDisplay = LED8x8()
 
 while True:
-  theDisplay()
+  theDisplay.display()
   time.sleep(.001)
 
