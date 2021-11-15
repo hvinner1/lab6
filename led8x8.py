@@ -22,7 +22,7 @@ class LED8x8():
     #self.shifter.shiftByte(pattern[num])
     for n in range(len(pattern)):
       self.shift1.shiftByte(self.pattern[n]) #maybe need tilda and mask &
-      self.shift1.shiftByte(1 << (n-1))
+      self.shift1.shiftByte(1 << (n))
       self.shift1.latch()
 
     '''while True:
@@ -41,3 +41,4 @@ while True:
   theDisplay.display()
   time.sleep(.001)
 
+#((~(self.pattern[i]))&(0b11111111))
