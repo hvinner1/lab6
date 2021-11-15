@@ -13,16 +13,16 @@ class LED8x8():
     #self.pattern = pattern
     #self.display = display
 
-  shifter = Shifter(data, latch, clock)
-  
+  #shifter = Shifter(data, latch, clock)
+
   def display(self): 
     #self.shifter.shiftByte(pattern[num])
     while True:
       for n in range(len(pattern)):
-        self.shifter.shiftByte(pattern[n])
+        self.Shifter.shiftByte(pattern[n])
         time.sleep(.001)
         for k in range(len(pattern)):
-          self.shifter.shiftByte(k)
+          self.Shifter.shiftByte(k)
           time.sleep(.001)
         
         #needs to go through all rows and run the pattern, then call shiftByte a second time to call for the columns
