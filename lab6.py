@@ -32,11 +32,11 @@ def lightbug():
     newcol = random.randint(-1,1)
 
     if (newrow + row) not in range(0,7):
-      row = newrow #keep as previous entry
+      pass
     else:
       row = row+newrow
     if (newcol+col) not in range(0,7):
-      col = newcol #keep as previous entry
+      pass
     elif newcol in range(0,7): 
       col = col+newcol
 

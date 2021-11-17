@@ -21,9 +21,9 @@ class LED8x8():
   
   def display(self, row, col): 
   
-    self.shift1.shiftByte((~(self.pattern[col]))&(0b11111111)) #maybe need tilda and mask &
-    self.shift1.shiftByte(1 << (row))
-    self.shift1.latch() #
+    self.shift1.shiftByte((~(self.pattern[row]))&(0b11111111)) #maybe need tilda and mask &
+    self.shift1.shiftByte(1 << (col))
+    self.shift1.latch()
 
     
   
