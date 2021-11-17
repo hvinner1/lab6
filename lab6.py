@@ -37,7 +37,7 @@ def lightbug(theDisplay):
     col = col+newcol
 
   theDisplay.new(row,col)
-  time.sleep(.1)
+  time.sleep(.25)
 
 while True:
   lightbug(theDisplay)
