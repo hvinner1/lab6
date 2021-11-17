@@ -1,11 +1,19 @@
 {
   "files": {
+    "lab6.py": [
+      {
+        "id": "9221d960-8da5-48ed-890d-c23b11e902e4",
+        "line": 43,
+        "version": 734,
+        "index": 1005
+      }
+    ],
     "led8x8.py": [
       {
         "id": "0ad3f3ed-366d-4663-9d6a-7ef44616aff0",
-        "line": 23,
-        "version": 661,
-        "index": 688
+        "line": 44,
+        "version": 1010,
+        "index": 1624
       }
     ]
   }

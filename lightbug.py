@@ -12,9 +12,8 @@ import time
 import random
 import multiprocessing
 
-theDisplay = LED8x8()
 
-def lightbug(theDisplay):
+def lightbug():
 
   row= random.randint(0,7)
   col= random.randint(0,7)
@@ -22,27 +21,26 @@ def lightbug(theDisplay):
   newrow= 3
   newcol= 3
 
-  #theDisplay = LED8x8()
+  theDisplay = LED8x8()
 
-  newrow = random.randint(-1, 1)
-  newcol = random.randint(-1,1)
+  while True:
 
-  if (newrow + row) not in range(0,7):
-    pass
-  else:
-    row = row+newrow
-  if (newcol+col) not in range(0,7):
-    pass
-  else: 
-    col = col+newcol
+    theDisplay.display()
+    time.sleep(0.1)
 
-  theDisplay.new(row,col)
-  time.sleep(.1)
+    newrow = random.randint(-1, 1)
+    newcol = random.randint(-1,1)
 
-while True:
-  lightbug(theDisplay)
+    if (newrow + row) not in range(0,7):
+      pass
+    else:
+      row = row+newrow
+    if (newcol+col) not in range(0,7):
+      pass
+    else: 
+      col = col+newcol
 
 
-'''p = multiprocessing.Process(name='lightningBug',target=lightbug)
+p = multiprocessing.Process(name='lightningBug',target=lightbug)
 p.daemon = True
-p.start()'''
+p.start()
