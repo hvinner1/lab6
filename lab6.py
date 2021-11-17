@@ -37,7 +37,7 @@ def lightbug():
       row = row+newrow
     if (newcol+col) not in range(0,7):
       pass
-    elif newcol in range(0,7): 
+    else: 
       col = col+newcol
 
 p = multiprocessing.Process(name='lightningBug',target=lightbug)
