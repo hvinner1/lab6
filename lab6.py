@@ -14,13 +14,18 @@ import multiprocessing
 
 theDisplay = LED8x8()
 
+row= random.randint(0,7)
+col= random.randint(0,7)
+
 def lightbug(theDisplay):
 
-  row= random.randint(0,7)
-  col= random.randint(0,7)
+  #row= random.randint(0,7)
+  #col= random.randint(0,7)
+  global row
+  global col
 
-  newrow= 3
-  newcol= 3
+  #newrow= 1
+  #newcol= 1
 
   #theDisplay = LED8x8()
 
