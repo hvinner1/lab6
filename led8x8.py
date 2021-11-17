@@ -36,7 +36,7 @@ class LED8x8():
     self.myArray[row] = 1<<col
     
 
-theDisplay = LED8x8()
+#theDisplay = LED8x8()
 
 #while True:
   #theDisplay.display(row,col)
