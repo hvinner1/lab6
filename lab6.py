@@ -28,8 +28,8 @@ def lightbug():
     theDisplay.display(newrow, newcol)
     time.sleep(0.1)
 
-    newrow = row + random.randit(-1,1)
-    newcol = col + random.randit(-1,1)
+    newrow = row + random.randint(-1, 1)
+    newcol = col + random.randint(-1,1)
 
     if newrow in range(0,7):
       pass #allow the change
