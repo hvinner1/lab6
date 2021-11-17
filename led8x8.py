@@ -21,8 +21,8 @@ class LED8x8():
   def display(self): 
     #self.shifter.shiftByte(pattern[num])
     for n in range(len(pattern)):
-      self.shift1.shiftByte(self.pattern[n]) #maybe need tilda and mask &
-      self.shift1.shiftByte((~(self.pattern[n]))&(0b11111111))
+      self.shift1.shiftByte((~(self.pattern[n]))&(0b11111111)) #maybe need tilda and mask &
+      self.shift1.shiftByte(1 << (n))
       self.shift1.latch()
 
     '''while True:
