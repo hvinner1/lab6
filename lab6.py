@@ -25,20 +25,20 @@ def lightbug():
 
   while True:
 
-    theDisplay.display(newrow, newcol)
+    theDisplay.display(row, col)
     time.sleep(0.1)
 
-    newrow = row + random.randint(-1, 1)
-    newcol = col + random.randint(-1,1)
+    newrow = random.randint(-1, 1)
+    newcol = random.randint(-1,1)
 
-    if newrow not in range(0,7):
-      newrow = row #keep as previous entry
-    elif newrow in range(0,7):
-      pass
-    if newcol not in range(0,7):
-      newcol = col #keep as previous entry
+    if (newrow + row) not in range(0,7):
+      row = newrow #keep as previous entry
+    else:
+      row = row+newrow
+    if (newcol+col) not in range(0,7):
+      col = newcol #keep as previous entry
     elif newcol in range(0,7): 
-      pass
+      col = col+newcol
 
 p = multiprocessing.Process(name='lightningBug',target=lightbug)
 p.start() 
