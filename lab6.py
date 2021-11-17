@@ -26,7 +26,7 @@ def lightbug():
   while True:
 
     theDisplay.display(newrow, newcol)
-    time.sleep(0.1)
+    time.sleep(0.2)
 
     newrow = row + random.randint(-1, 1)
     newcol = col + random.randint(-1,1)
