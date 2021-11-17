@@ -31,14 +31,14 @@ def lightbug():
     newrow = row + random.randint(-1, 1)
     newcol = col + random.randint(-1,1)
 
-    if newrow in range(0,7):
-      pass #allow the change
-    elif newrow not in range(0,7):
+    if newrow not in range(0,7):
       newrow = row #keep as previous entry
-    if newcol in range(0,7):
+    elif newrow in range(0,7):
       pass
-    elif newcol not in range(0,7): 
+    if newcol not in range(0,7):
       newcol = col #keep as previous entry
+    elif newcol in range(0,7): 
+      pass
 
 p = multiprocessing.Process(name='lightningBug',target=lightbug)
 p.start() 
